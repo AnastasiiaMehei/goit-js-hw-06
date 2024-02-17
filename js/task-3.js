@@ -7,13 +7,13 @@ class StringBuilder {
     return this.#value;
   }
   padEnd(str) {
-    return this.#value.push(str);
+    this.#value = this.#value + str;
   }
   padStart(str) {
-    return this.#value.unshift(str);
+    this.#value = str + this.#value;
   }
   padBoth(str) {
-    return this.#value.concat(str);
+    this.#value = str + this.#value + str;
   }
 }
 
